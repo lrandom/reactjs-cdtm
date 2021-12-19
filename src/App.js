@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Nav from './components/Nav.js';
+import Ex1 from './components/Ex1.js';
 
 function App() {
     const schoolName = "Cao đẳng công nghệ và thương mại";
@@ -15,7 +16,7 @@ function App() {
         alert('Click me');
     }
     const isRenderA = false;
-    const list = [
+    let list = [
         10,
         20,
         30,
@@ -36,6 +37,8 @@ function App() {
                     return <div key={index}>{item}</div>
                 })
             }
+
+            <Ex1></Ex1>
         </div>
     );
 }
