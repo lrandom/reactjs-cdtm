@@ -3,11 +3,41 @@ import './App.css';
 import Nav from './components/Nav.js';
 
 function App() {
-  return (
-    <div className="App">
-        <Nav></Nav>
-    </div>
-  );
+    const schoolName = "Cao đẳng công nghệ và thương mại";
+    const getTotal = (a, b) => {
+        return a + b;
+    }
+    const imgSrc = 'https://image.winudf.com/v2/image1/Y29tLm5hdHVyYWxpbWFnZWhkd2FsbHBhcGVyLnJ5cnNfc2NyZWVuXzBfMTU0MjM3MDgxNl8wODU/screen-0.jpg?fakeurl=1&type=.jpg';
+    const obj = {
+        backgroundColor: 'red'
+    }
+    const clickMe = () => {
+        alert('Click me');
+    }
+    const isRenderA = false;
+    const list = [
+        10,
+        20,
+        30,
+        40
+    ];
+    return (
+        <div className="App">
+            {
+                isRenderA ? <Nav /> : <div>Hello</div>
+            }
+            {schoolName}
+            {10 * 20}
+            {getTotal(10, 20)}
+            <img className="img" style={obj} src={imgSrc}/>
+            <button onClick={clickMe}>Click me, bro</button>
+            {
+                list.map((item, index) => {
+                    return <div key={index}>{item}</div>
+                })
+            }
+        </div>
+    );
 }
 
 export default App;
