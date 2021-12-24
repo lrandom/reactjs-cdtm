@@ -3,6 +3,11 @@ import './App.css';
 import Nav from './components/Nav.js';
 import Ex1 from './components/Ex1.js';
 
+import {name} from './demo/helper.js';
+import {getTotal} from "./demo/helper.js";
+import {obj} from './demo/helper.js';
+import getMyName from './demo/helper';
+
 function App() {
     const schoolName = "Cao đẳng công nghệ và thương mại";
     const getTotal = (a, b) => {
@@ -25,7 +30,7 @@ function App() {
     return (
         <div className="App">
             {
-                isRenderA ? <Nav /> : <div>Hello</div>
+                isRenderA ? <Nav/> : <div>Hello</div>
             }
             {schoolName}
             {10 * 20}
@@ -37,8 +42,11 @@ function App() {
                     return <div key={index}>{item}</div>
                 })
             }
-
             <Ex1></Ex1>
+            <div>{name}</div>
+            <div>{getTotal(10, 10)}</div>
+            <div>{obj.name}</div>
+            <div>{getMyName}</div>
         </div>
     );
 }
