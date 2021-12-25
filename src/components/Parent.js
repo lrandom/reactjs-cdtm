@@ -6,11 +6,16 @@ class Parent extends React.Component {
         super();
     }
 
+
+    getDataFromChild(val) {
+        alert(val);
+    }
+
     render() {
         return (
             <div>
                 <h1>Parent</h1>
-                <Child name={"Nguyen Nam"} age={"20"}></Child>
+                <Child sendDataToParent={this.getDataFromChild} name={"Nguyen Nam"} age={"20"}></Child>
             </div>
         );
     }

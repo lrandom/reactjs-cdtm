@@ -6,7 +6,10 @@ class Child extends React.Component {
     }
 
     render() {
-        return (<div>{this.props.name}{this.props.age}</div>)
+        return (<div>
+            {this.props.name}{this.props.age}
+ c          <button onClick={()=>{this.props.sendDataToParent("I am child")}}>Send Data To Parent</button>
+        </div>)
     }
 }
 

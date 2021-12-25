@@ -1,0 +1,29 @@
+.tab-title {
+    display: inline-block;
+    padding: 10px;
+    background: #d9d9d9;
+    border-radius: 10px 10px 0px 0px;
+    margin: 5px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.tab-content {
+    background: #ffffff;
+    border-radius: 10px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-ui {
+    width: 500px;
+    margin:0px auto;
+}
+
+.tab-active {
+    background: white;
+
+}
