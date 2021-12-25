@@ -2,6 +2,7 @@ import './App.css';
 import MyComponent1 from "./components/MyComponent1";
 import MyComponent2 from "./components/MyComponent2";
 import {useState} from "react";
+import Parent from "./components/Parent";
 
 function App() {
     const [isShow, setShow] = useState(true);
