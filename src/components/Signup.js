@@ -1,6 +1,7 @@
 import React from "react";
 import './Signup.css';
 import Axios from "axios";
+import {axiosInstance} from "../axiosInstance";
 
 class Signup extends React.Component {
     constructor() {
@@ -14,14 +15,13 @@ class Signup extends React.Component {
     }
 
     componentDidMount() {
-        Axios.get('http://localhost/demo_axios/addUser.php').then(() => {
-            alert("User added successfully");
-        });
+
+
     }
 
     doSignup(event) {
         event.preventDefault();
-        Axios.post('http://localhost/demo_axios/addUser.php', {
+        axiosInstance.post('/addUser.php', {
             username: this.state.username,
             password: this.state.password,
             confirm_password: this.state.confirm_password,
